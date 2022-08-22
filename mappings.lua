@@ -2,15 +2,20 @@ local M = {}
 
 M.general = {
   i = {
-    ["jk"] = { "<ESC>", "Exit insert mode when typing jk fast"}
+    ["jk"] = { "<ESC>", "escape insert mode", opts = {nowait = true}}
   },
 
   n = {
-    -- switch between windows
-    ["<S-h>"] = { "<C-w>h", "window left" },
-    ["<S-l>"] = { "<C-w>l", "window right" },
-    ["<S-j>"] = { "<C-w>j", "window down" },
-    ["<S-k>"] = { "<C-w>k", "window up" },
+    [";"] = { ":", "enter cmdline", opts = { nowait = true } },
+  },
+}
+
+M.telescope = {
+  plugin = true,
+
+  n = {
+    ["<leader>ft"] = { "<CMD>Telescope flutter commands<CR>", "show flutter commands" },
+    ["<leader>td"] = { "<cmd> Telescope diagnostics <CR>", "show diagnostics" },
   }
 }
 

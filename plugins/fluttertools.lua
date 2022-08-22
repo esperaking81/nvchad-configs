@@ -14,7 +14,7 @@ flutter_tools.setup {
 
   dev_tools = {
     autostart = true, -- autostart devtools server if not detected
-    auto_open_browser = true, -- Automatically opens devtools in the browser
+    auto_open_browser = false, -- Automatically opens devtools in the browser
   },
 
   lsp = {

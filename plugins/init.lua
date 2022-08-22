@@ -3,6 +3,10 @@ return {
     disable = false,
   },
 
+  ["folke/which-key.nvim"] = {
+    disable = false,
+  },
+
   ["neovim/nvim-lspconfig"] = {
     config = function()
       require "plugins.configs.lspconfig"
@@ -16,4 +20,11 @@ return {
       require 'custom.plugins.fluttertools'
     end
   },
+
+  ["jose-elias-alvarez/null-ls.nvim"] = {
+    after = "nvim-lspconfig",
+    config = function ()
+      require 'custom.plugins.null-ls'
+    end
+  }
 }

@@ -7,6 +7,7 @@ local M = {}
 
 M.ui = {
   theme = "gruvchad",
+  transparency = false,
 }
 
 M.plugins = {
