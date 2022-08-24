@@ -14,6 +14,7 @@ local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
 
 local on_attach = function(client, bufnr)
   if client.resolved_capabilities.document_formatting then
+    print "client resolve document formatting..."
     vim.api.nvim_clear_autocmds { buffer = 0, group = augroup_format }
     vim.api.nvim_create_autocmd("BufWritePre", {
       group = augroup_format,

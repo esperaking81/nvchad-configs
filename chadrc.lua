@@ -6,19 +6,19 @@ local M = {}
 -- example of changing theme:
 
 M.ui = {
-  theme = "gruvchad",
-  transparency = false,
+  -- theme = "gruvchad",
+  -- transparency = true,
 }
 
 M.plugins = {
-  user = require 'custom.plugins',
+  user = require "custom.plugins",
 
   override = {
     ["nvim-treesiter/nvim-treesiter"] = pluginConfs.treesiter,
     ["williamboman/mason.nvim"] = pluginConfs.mason,
-  }
+  },
 }
 
-M.mappings = require 'custom.mappings'
+M.mappings = require "custom.mappings"
 
 return M
