@@ -7,6 +7,14 @@ M.general = {
 
   n = {
     [";"] = { ":", "enter cmdline", opts = { nowait = true } },
+    -- Split windows
+    ["ss"] = { ":split<Return><C-w>w", opts = { silent = true } },
+    ["sv"] = { ":vsplit<Return><C-w>w", opts = { silent = true } },
+    -- Move between windows
+    ["sh"] = { "<C-w>h", opts = { silent = true } },
+    ["sj"] = { "<C-w>j", opts = { silent = true } },
+    ["sk"] = { "<C-w>k", opts = { silent = true } },
+    ["sl"] = { "<C-w>l", opts = { silent = true } },
   },
 }
 

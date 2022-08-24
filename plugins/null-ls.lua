@@ -19,7 +19,7 @@ local on_attach = function(client, bufnr)
       group = augroup_format,
       buffer = bufnr,
       callback = function()
-        vim.lsp.buf.formatting_seq_sync { bufnr = bufnr }
+        vim.lsp.buf.formatting_seq_sync()
       end,
     })
   end

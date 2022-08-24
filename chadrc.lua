@@ -6,9 +6,8 @@ local M = {}
 -- example of changing theme:
 
 M.ui = {
-  theme = "catppuccin",
-  theme_toggle = { "catppuccin", "catppuccin_latte" },
-  transparency = true,
+  -- theme = "gruvchad",
+  -- transparency = true,
 }
 
 M.plugins = {
