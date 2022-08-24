@@ -16,15 +16,15 @@ return {
 
   ["akinsho/flutter-tools.nvim"] = {
     after = "nvim-lspconfig",
-    config = function ()
-      require 'custom.plugins.fluttertools'
-    end
+    config = function()
+      require "custom.plugins.fluttertools"
+    end,
   },
 
   ["jose-elias-alvarez/null-ls.nvim"] = {
     after = "nvim-lspconfig",
-    config = function ()
-      require 'custom.plugins.null-ls'
-    end
-  }
+    config = function()
+      require "custom.plugins.null-ls"
+    end,
+  },
 }

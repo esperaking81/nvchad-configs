@@ -14,12 +14,12 @@ local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
 
 local on_attach = function(client, bufnr)
   if client.resolved_capabilities.document_formatting then
-    vim.api.nvim_clear_autocmds { buffer = 0, group = augroup_format }
+    vim.api.nvim_clear_autocmds { buffer = bufnr, group = augroup_format }
     vim.api.nvim_create_autocmd("BufWritePre", {
       group = augroup_format,
-      buffer = 0,
+      buffer = bufnr,
       callback = function()
-        vim.lsp.buf.formatting_seq_sync()
+        vim.lsp.buf.formatting_seq_sync { bufnr = bufnr }
       end,
     })
   end
