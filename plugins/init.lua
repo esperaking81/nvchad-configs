@@ -1,10 +1,18 @@
-return {
+local M = {}
+
+M.plugins = {
+  ["Pocco81/TrueZen.nvim"] = {
+    config = function()
+      require "custom.plugins.truezen"
+    end,
+  },
+
   ["goolord/alpha-nvim"] = {
-    disable = false,
+    disable = true,
   },
 
   ["folke/which-key.nvim"] = {
-    disable = false,
+    disable = true,
   },
 
   ["neovim/nvim-lspconfig"] = {
@@ -28,3 +36,5 @@ return {
     end,
   },
 }
+
+return M
